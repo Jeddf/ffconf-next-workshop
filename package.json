@@ -13,6 +13,7 @@
   "license": "MIT",
   "dependencies": {
     "@mdx-js/loader": "^1.5.1",
+    "@mdx-js/react": "^1.5.1",
     "@mdx-js/tag": "^0.20.3",
     "@next/mdx": "^9.1.1",
     "@zeit/next-bundle-analyzer": "^0.1.2",

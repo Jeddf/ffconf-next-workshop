@@ -15,6 +15,11 @@ const Header = ({ user }) => (
           </Link>
         </li>
         <li>
+          <Link href="/aboot">
+            <a>Aboot</a>
+          </Link>
+        </li>
+        <li>
           <Link href="/contact">
             <a>Contact</a>
           </Link>

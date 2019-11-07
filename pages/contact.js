@@ -7,7 +7,8 @@ export default () => (
       My name is <strong>Jedd</strong>, you can contact me via the web!
     </p>
     <p>
-      Or you can read more <Link href="/about">about me</Link>
+      Or you can read more <Link href="/about">about me</Link> or{" "}
+      <Link href="/aboot">aboot me</Link>
     </p>
   </>
 );

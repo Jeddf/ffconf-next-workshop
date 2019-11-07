@@ -1,6 +1,15 @@
-import App from 'next/app';
-import Layout from '../components/Layout';
-import { appWithUser } from '../lib/withUser';
+import App from "next/app";
+import Link from "next/link";
+import Layout from "../components/Layout";
+import { appWithUser } from "../lib/withUser";
+import { MDXProvider } from "@mdx-js/react";
+const components = {
+  a: ({ children, href, ...props }) => (
+    <Link href={href}>
+      <a {...props}>{children}</a>
+    </Link>
+  )
+};
 
 class MyApp extends App {
   // you can also add to page props here, but in our case we don't need to
@@ -17,9 +26,11 @@ class MyApp extends App {
   render() {
     const { Component, pageProps } = this.props;
     return (
-      <Layout {...pageProps}>
-        <Component {...pageProps} />
-      </Layout>
+      <MDXProvider components={components}>
+        <Layout {...pageProps}>
+          <Component {...pageProps} />
+        </Layout>
+      </MDXProvider>
     );
   }
 }
