@@ -1,9 +1,8 @@
 import Link from "next/link";
-import Layout from "~/components/Layout";
 import fetch from "isomorphic-unfetch";
 
 const Page = ({ sessions }) => (
-  <Layout>
+  <>
     <h1>Talks</h1>
     <ul>
       <style jsx>{`
@@ -60,7 +59,7 @@ const Page = ({ sessions }) => (
         </li>
       ))}
     </ul>
-  </Layout>
+  </>
 );
 
 Page.getInitialProps = async () => {

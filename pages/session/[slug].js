@@ -1,15 +1,14 @@
 import fetch from "isomorphic-unfetch";
 import Error from "~/pages/_error";
-import Layout from "~/components/Layout";
 import { withUser } from "~/lib/withUser";
 import { getApiUrl } from "~/lib/getApiUrl";
 
-const Page = ({ error, user, session: { speaker, ...session } = {} }) => {
+const Page = ({ error, session: { speaker, ...session } = {} }) => {
   if (error) {
     return <Error message={error} />;
   }
   return session ? (
-    <Layout user={user}>
+    <>
       <h1>{session.title}</h1>
       <p>⏰ {session.time}</p>
       {session.description.split(/\n/).map((p, i) => (
@@ -63,11 +62,11 @@ const Page = ({ error, user, session: { speaker, ...session } = {} }) => {
         </div>
         <img src={speaker.photo} />
       </div>
-    </Layout>
+    </>
   ) : (
-    <Layout>
+    <>
       <p>oh</p>
-    </Layout>
+    </>
   );
 };
 
