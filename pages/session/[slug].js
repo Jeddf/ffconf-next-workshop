@@ -12,7 +12,6 @@ const Page = ({ error, session: { speaker, ...session } = {} }) => {
       <p>⏰ {session.time}</p>
       {session.description.split(/\n/).map((p, i) => (
         <p key={i}>{p}</p>
-        
       ))}
       <div className="speaker">
         <style jsx>{`
@@ -71,7 +70,7 @@ const Page = ({ error, session: { speaker, ...session } = {} }) => {
 };
 
 Page.getInitialProps = async ({ query: { slug } }) => {
-  const res = await fetch(`https://ffconf.org/api/session/${slug}`);
+  const res = await fetch(`${process.env.API}/session/${slug}`);
 
   if (res.status !== 200) {
     return { error: `Session ${slug} failed to load!` };

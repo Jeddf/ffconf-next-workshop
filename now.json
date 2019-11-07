@@ -1,0 +1,5 @@
+{
+  "env": {
+    "API": "https://next-workshop.jedd.now.sh/api"
+  }
+}
