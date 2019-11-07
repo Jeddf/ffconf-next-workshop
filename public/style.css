@@ -1,0 +1,144 @@
+* {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  background: #fafafa;
+  color: #212121;
+  font-size: 16px;
+  line-height: 28px;
+}
+
+body,
+html,
+#__next,
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#root header nav,
+#root main {
+  margin: 0 auto;
+}
+
+#root footer div,
+#root header nav,
+#root main {
+  padding: 10px;
+}
+
+#root header {
+  background: rgb(33, 150, 243);
+  color: white;
+}
+
+#root footer {
+  background: #eee;
+}
+
+#root {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#root > main {
+  width: 100%;
+}
+
+#root > main {
+  flex-grow: 1;
+}
+
+#root nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+#root > header nav {
+  padding: 20px;
+}
+
+#root > header nav li {
+  margin: 0 10px;
+}
+
+#root > header nav li:first-child {
+  margin-left: 0;
+}
+
+hr {
+  border: 0;
+  border-bottom: 2px solid #ccc;
+  border-radius: 2px;
+}
+
+h1,
+h2 {
+  margin: 42px 0 24px 0;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+a {
+  color: blue;
+}
+
+input,
+textarea {
+  font-size: 1rem;
+}
+
+#root > header nav a {
+  color: white;
+  padding: 5px 10px;
+  background: rgb(66, 165, 245);
+  text-decoration: none;
+  border-radius: 2px;
+}
+
+#root > header nav a:hover {
+  background: rgb(25, 118, 210);
+}
+
+strong {
+  font-weight: 700;
+}
+
+mark {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  background: #ddd;
+  border-radius: 2px;
+}
+
+a[href^="https://twitter"]:after {
+  content: " 🐦";
+  opacity: 0.5;
+}
+
+@media (min-width: 720px) {
+  #root header nav,
+  #root footer div,
+  #root main {
+    width: 720px;
+    width: 60ch;
+    margin: 0 auto;
+  }
+
+  ul,
+  ol {
+    padding-left: 20px;
+  }
+}
