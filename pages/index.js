@@ -42,7 +42,7 @@ const Page = ({ sessions }) => (
         <li key={session.slug}>
           <p className="title">
             <span>#{session.order} </span>
-            <Link href={`/session?slug=${session.slug}`}>
+            <Link href="/session/[slug]" as={`/session/${session.slug}`}>
               <a>{session.title}</a>
             </Link>
           </p>

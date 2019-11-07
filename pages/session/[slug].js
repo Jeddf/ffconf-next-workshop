@@ -1,6 +1,6 @@
 import fetch from "isomorphic-unfetch";
-import Error from "./_error";
-import Layout from "../components/Layout";
+import Error from "../_error";
+import Layout from "../../components/Layout";
 
 const Page = ({ error, session: { speaker, ...session } = {} }) => {
   if (error) {
@@ -12,6 +12,7 @@ const Page = ({ error, session: { speaker, ...session } = {} }) => {
       <p>⏰ {session.time}</p>
       {session.description.split(/\n/).map((p, i) => (
         <p key={i}>{p}</p>
+        
       ))}
       <div className="speaker">
         <style jsx>{`
