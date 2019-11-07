@@ -1,13 +1,15 @@
 import fetch from "isomorphic-unfetch";
 import Error from "~/pages/_error";
 import Layout from "~/components/Layout";
+import { withUser } from "~/lib/withUser";
+import { getApiUrl } from "~/lib/getApiUrl";
 
-const Page = ({ error, session: { speaker, ...session } = {} }) => {
+const Page = ({ error, user, session: { speaker, ...session } = {} }) => {
   if (error) {
     return <Error message={error} />;
   }
   return session ? (
-    <Layout>
+    <Layout user={user}>
       <h1>{session.title}</h1>
       <p>⏰ {session.time}</p>
       {session.description.split(/\n/).map((p, i) => (
@@ -69,8 +71,8 @@ const Page = ({ error, session: { speaker, ...session } = {} }) => {
   );
 };
 
-Page.getInitialProps = async ({ query: { slug } }) => {
-  const res = await fetch(`${process.env.API}/session/${slug}`);
+Page.getInitialProps = async ({ req, query: { slug } }) => {
+  const res = await fetch(`${getApiUrl(req)}/session/${slug}`);
 
   if (res.status !== 200) {
     return { error: `Session ${slug} failed to load!` };
@@ -82,4 +84,4 @@ Page.getInitialProps = async ({ query: { slug } }) => {
   };
 };
 
-export default Page;
+export default withUser(Page);

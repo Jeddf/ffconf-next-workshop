@@ -1,5 +1,5 @@
 {
   "env": {
-    "API": "https://next-workshop.jedd.now.sh/api"
+    "SECRET": "SO SECRET! BAD STUFF."
   }
 }
