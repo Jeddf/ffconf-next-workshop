@@ -1,6 +1,6 @@
 import fetch from "isomorphic-unfetch";
-import Error from "../_error";
-import Layout from "../../components/Layout";
+import Error from "~/pages/_error";
+import Layout from "~/components/Layout";
 
 const Page = ({ error, session: { speaker, ...session } = {} }) => {
   if (error) {
