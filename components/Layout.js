@@ -1,5 +1,6 @@
 import Header from "./Header";
 import Footer from "./Footer";
+
 import router from "next/router";
 import NProgress from "nprogress";
 
