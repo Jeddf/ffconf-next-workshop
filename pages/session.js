@@ -1,7 +1,11 @@
 import fetch from "isomorphic-unfetch";
+import Error from "./_error";
 import Layout from "../components/Layout";
 
-const Page = ({ session: { speaker, ...session } }) => {
+const Page = ({ error, session: { speaker, ...session } = {} }) => {
+  if (error) {
+    return <Error message={error} />;
+  }
   return session ? (
     <Layout>
       <h1>{session.title}</h1>
@@ -67,6 +71,11 @@ const Page = ({ session: { speaker, ...session } }) => {
 
 Page.getInitialProps = async ({ query: { slug } }) => {
   const res = await fetch(`https://ffconf.org/api/session/${slug}`);
+
+  if (res.status !== 200) {
+    return { error: `Session ${slug} failed to load!` };
+  }
+
   const session = await res.json();
   return {
     session
