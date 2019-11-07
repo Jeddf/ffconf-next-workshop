@@ -1,0 +1,22 @@
+{
+  "title": "Getting more from Git",
+  "slug": "getting-more-from-git",
+  "time": null,
+  "description": "Git is like a Swiss Army Knife for telling the story of your project. Yet most of us are only using the big knife and maybe the scissors to fudge our code into version control. In this talk we're going to learn about some more advanced Git commands and some history too.",
+  "video": null,
+  "audio": null,
+  "slides": null,
+  "order": 3,
+  "tags": [
+    "development & ops"
+  ],
+  "event": {
+    "year": "2019"
+  },
+  "speaker": {
+    "name": "Alice Bartlett",
+    "photo": "",
+    "twitter": "alicebartlett",
+    "bio": "Needed a 5th option to study at AS level. Asked the person next to me. Started with the Computing A level now we here."
+  }
+}

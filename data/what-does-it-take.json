@@ -1,0 +1,23 @@
+{
+  "title": "What does it take to become a developer in 2020?",
+  "slug": "what-does-it-take",
+  "time": null,
+  "description": "Amina shares her story about what it takes to become a developer after teaching herself how to code, juggling a full-time job and baby.",
+  "video": null,
+  "audio": null,
+  "slides": null,
+  "order": 2,
+  "tags": [
+    "betterment",
+    "community"
+  ],
+  "event": {
+    "year": "2019"
+  },
+  "speaker": {
+    "name": "Amina Adewusi",
+    "photo": "",
+    "twitter": "a_adewusi",
+    "bio": "I taught myself how to code soon after becoming a mother. I realised that continuing my job travelling around the world was a slightly optimistic view of my mothering abilities! After googling \"work from home\" I discovered software engineering and decided to give it a go."
+  }
+}

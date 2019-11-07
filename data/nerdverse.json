@@ -1,0 +1,24 @@
+{
+  "title": "Adventures in reinventing interfaces",
+  "slug": "nerdverse",
+  "time": null,
+  "description": "Computers and other electronic devices existed for a long time before the web made its debut. Can modern web interfaces help invigorate the small computing space, while driving a new set of creative developers to invent better and more playful experiences?",
+  "video": null,
+  "audio": null,
+  "slides": null,
+  "order": 8,
+  "tags": [
+    "javascript",
+    "iot",
+    "fun"
+  ],
+  "event": {
+    "year": "2019"
+  },
+  "speaker": {
+    "name": "Suz Hinton",
+    "photo": "",
+    "twitter": "noopkat",
+    "bio": "My dad brought home our first family computer, a second-hand Commodore 64, when all of my friends were already using PCs with Windows 3.1. I fell in love with programming from that first day of typing commands in BASIC."
+  }
+}

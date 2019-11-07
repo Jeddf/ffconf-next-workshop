@@ -1,0 +1,22 @@
+{
+  "title": "From Milliseconds to Millions: A Look at the Numbers Powering Web Performance",
+  "slug": "from-milliseconds-to-millions",
+  "time": null,
+  "description": "We all know performance is big business, but how big? Let's take a look at some of the numbers powering the web performance industry, from both sides of the table. What do performance improvements mean for my clients, and how do we translate that into a working relationship",
+  "video": null,
+  "audio": null,
+  "slides": null,
+  "order": 5,
+  "tags": [
+    "betterment"
+  ],
+  "event": {
+    "year": "2019"
+  },
+  "speaker": {
+    "name": "Harry Roberts",
+    "photo": "",
+    "twitter": "csswizardry",
+    "bio": "I'm a failed designer who learned it the hard way: I was much better at coding my portfolio site than I was at designing it. I decided to admit defeat and stick with keyboards and clearfixes."
+  }
+}

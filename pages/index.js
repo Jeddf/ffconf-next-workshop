@@ -64,7 +64,7 @@ const Page = ({ sessions }) => (
 );
 
 Page.getInitialProps = async () => {
-  const res = await fetch(`https://ffconf.org/api/event/2018`);
+  const res = await fetch(`https://ffconf.org/api/event/2019`);
   const sessions = await res.json();
   return {
     sessions

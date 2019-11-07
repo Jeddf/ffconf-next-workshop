@@ -1,0 +1,23 @@
+{
+  "title": "Taking The Web Off The Screen",
+  "slug": "taking-the-web-off-the-screen",
+  "time": null,
+  "description": "The rise of generative art has brought a whole new wave of creativity to the web; this talk is about the myriad of ways we can use all that coding knowledge to make cool art in the physical realm.",
+  "video": null,
+  "audio": null,
+  "slides": null,
+  "order": 7,
+  "tags": [
+    "javascript",
+    "creativity"
+  ],
+  "event": {
+    "year": "2019"
+  },
+  "speaker": {
+    "name": "Charlotte Dann",
+    "photo": "",
+    "twitter": "charlotte_dann",
+    "bio": "Got carried away tweaking Tumblr themes, discovered it hurt my fingers less than my other teen hobby of weaving chainmaille, been tip tapping ever since."
+  }
+}

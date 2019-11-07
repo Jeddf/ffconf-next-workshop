@@ -1,0 +1,23 @@
+{
+  "title": "Effortless Performance Debugging",
+  "slug": "effortless-performance-debugging",
+  "time": null,
+  "description": "During the session we will talk about the causes of painful performance and look into simple and actionable steps how to make a website more performant with a little effort.",
+  "video": null,
+  "audio": null,
+  "slides": null,
+  "order": 6,
+  "tags": [
+    "javascript",
+    "performance"
+  ],
+  "event": {
+    "year": "2019"
+  },
+  "speaker": {
+    "name": "Anna Migas",
+    "photo": "",
+    "twitter": "szynszyliszys",
+    "bio": "I wanted to study English, but my final test results weren't good enough. I was looking through all majors I could apply for at Uni and found out HCI-like degree course"
+  }
+}
