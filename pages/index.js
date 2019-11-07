@@ -1,8 +1,8 @@
 import Link from "next/link";
 import Layout from "../components/Layout";
-import sessions from "../data/sessions.json";
+import fetch from "isomorphic-unfetch";
 
-const Page = () => (
+const Page = ({ sessions }) => (
   <Layout>
     <h1>Talks</h1>
     <ul>
@@ -41,12 +41,12 @@ const Page = () => (
       {sessions.map(session => (
         <li key={session.slug}>
           <p className="title">
+            <span>#{session.order} </span>
             <Link href={`/session?slug=${session.slug}`}>
               <a>{session.title}</a>
             </Link>
           </p>
           <p className="info">
-            <span>⏰ {session.time}</span>
             <span className="speaker name">{session.speaker.name} </span>
             <span className="speaker twitter">
               <a
@@ -62,5 +62,13 @@ const Page = () => (
     </ul>
   </Layout>
 );
+
+Page.getInitialProps = async () => {
+  const res = await fetch(`https://ffconf.org/api/event/2019`);
+  const sessions = await res.json();
+  return {
+    sessions
+  };
+};
 
 export default Page;
