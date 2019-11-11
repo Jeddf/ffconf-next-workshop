@@ -1,6 +1,6 @@
 import fetch from "isomorphic-unfetch";
 import Error from "~/pages/_error";
-import { withUser } from "~/lib/withUser";
+import { withUser } from "~/lib/authentication";
 import { getApiUrl } from "~/lib/getApiUrl";
 
 const Page = ({ error, session: { speaker, ...session } = {} }) => {

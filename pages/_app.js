@@ -1,7 +1,7 @@
 import App from "next/app";
 import Link from "next/link";
 import Layout from "../components/Layout";
-import { appWithUser } from "../lib/withUser";
+import { appWithUser } from "../lib/authentication";
 import { MDXProvider } from "@mdx-js/react";
 const components = {
   a: ({ children, href, ...props }) => (

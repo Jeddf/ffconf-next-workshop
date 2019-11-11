@@ -66,6 +66,8 @@ html,
 }
 
 #root > header nav {
+  justify-content: space-between;
+  display: flex;
   padding: 20px;
 }
 
@@ -92,6 +94,7 @@ h2 {
 
 a {
   color: blue;
+  cursor: pointer;
 }
 
 input,

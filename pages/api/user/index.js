@@ -1,13 +1,14 @@
-import jwt from 'jsonwebtoken';
+import jwt from "jsonwebtoken";
 
 // dummy user auth process
 const secret = process.env.SECRET;
 const users = [
   {
-    email: 'foo@example.com',
+    email: "foo@example.com",
+    name: "Sid",
     avatar:
-      'https://en.gravatar.com/userimage/394628/6f5c8363fd7b25ae1736a1dd1ecbd85e.jpg?size=200',
-  },
+      "https://en.gravatar.com/userimage/394628/6f5c8363fd7b25ae1736a1dd1ecbd85e.jpg?size=200"
+  }
 ];
 
 export const getUser = req => {
@@ -20,16 +21,22 @@ export const getUser = req => {
   }
 };
 
+const DELETE = (req, res) => {
+  // DROP the cookie
+  res.setHeader("Set-Cookie", `token=null; Path=/; httpOnly; Max-Age=0`);
+  return res.status(204).send("");
+};
+
 const POST = (req, res) => {
   const user = users.find(u => u.email === req.body.email); // super not-secure
 
   if (!user) {
-    return res.status(400).json({ error: 'Authentication failed' });
+    return res.status(400).json({ error: "Authentication failed" });
   }
 
   // drop the cookie
   res.setHeader(
-    'Set-Cookie',
+    "Set-Cookie",
     `token=${escape(jwt.sign(user, secret))}; Path=/; httpOnly`
   );
   // res.cookies = { token: jwt.sign(user, secret) };
@@ -47,9 +54,13 @@ const GET = (req, res) => {
 };
 
 export default (req, res) => {
-  if (req.method === 'POST') {
+  if (req.method === "POST") {
     // auth
     return POST(req, res);
+  }
+  if (req.method === "DELETE") {
+    // logout
+    return DELETE(req, res);
   }
 
   // return user

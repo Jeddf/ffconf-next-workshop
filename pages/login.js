@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { withRouter } from "next/router";
-import { useUser } from "../lib/withUser";
+import { useUser } from "~/lib/authentication";
 import { getApiUrl } from "~/lib/getApiUrl";
 
 const Login = ({ req, router }) => {

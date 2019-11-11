@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { logout } from "~/lib/authentication";
 
 const Header = ({ user }) => (
   <header>
@@ -26,7 +27,7 @@ const Header = ({ user }) => (
         </li>
         <li className="user">
           {user ? (
-            <img className="avatar" src={user.avatar} />
+            <a onClick={logout}>Log out</a>
           ) : (
             <Link href="/login">
               <a>Log in</a>
@@ -34,6 +35,7 @@ const Header = ({ user }) => (
           )}
         </li>
       </ul>
+      {user ? <strong>Hi {user.name}!</strong> : null}
     </nav>
   </header>
 );
