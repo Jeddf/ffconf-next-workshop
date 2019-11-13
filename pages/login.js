@@ -92,7 +92,7 @@ const Login = ({ req, router }) => {
           }
         `}</style>
         <div>
-          <label htmlFor="email">Email</label>
+          <label htmlFor="email">Email (Working: <em>foo@example.com</em>)</label>
           <input
             value={email}
             onChange={handleEmail}
@@ -102,7 +102,7 @@ const Login = ({ req, router }) => {
           />
         </div>
         <div>
-          <label htmlFor="password">Password</label>
+          <label htmlFor="password">Password (Not <em>actually</em> needed 😬)</label>
           <input
             value={password}
             onChange={handlePassword}
