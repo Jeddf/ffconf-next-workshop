@@ -1,6 +1,5 @@
 import fetch from "isomorphic-unfetch";
 import Error from "~/pages/_error";
-import { withUser } from "~/lib/authentication";
 import { getApiUrl } from "~/lib/getApiUrl";
 
 const Page = ({ error, session: { speaker, ...session } = {} }) => {
@@ -83,4 +82,4 @@ Page.getInitialProps = async ({ req, query: { slug } }) => {
   };
 };
 
-export default withUser(Page);
+export default Page;

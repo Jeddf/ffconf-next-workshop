@@ -41,7 +41,7 @@ const Login = ({ req, router }) => {
     }
 
     router.push("/");
-    // setUser(json);
+    setUser(json);
   };
 
   return (
