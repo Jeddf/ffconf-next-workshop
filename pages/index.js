@@ -1,5 +1,6 @@
 import Link from "next/link";
 import fetch from "isomorphic-unfetch";
+import { getApiUrl } from "~/lib/getApiUrl";
 
 const Page = ({ sessions }) => (
   <>
@@ -62,8 +63,8 @@ const Page = ({ sessions }) => (
   </>
 );
 
-Page.getInitialProps = async () => {
-  const res = await fetch(`https://ffconf.org/api/event/2019`);
+Page.getInitialProps = async ({ req }) => {
+  const res = await fetch(`${getApiUrl(req)}/session`);
   const sessions = await res.json();
   return {
     sessions
